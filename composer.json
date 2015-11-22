@@ -1,5 +1,7 @@
 {
   "name": "danharper/laravel-jsonx",
+  "description": "Add XML support to a JSON-speaking Laravel API with a single middleware via JSONx",
+  "keywords": ["jsonx", "json", "xml", "laravel", "lumen", "ibm"],
   "license": "MIT",
   "authors": [
     {
@@ -10,7 +12,7 @@
   "minimum-stability": "stable",
   "require": {
     "danharper/jsonx": "^0.1.0",
-    "illuminate/http": ">=5.0.0"
+    "illuminate/http": ">=4.1.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^5.0",
