@@ -1,4 +1,4 @@
-# Laravel JSONx
+# JSONx for Laravel
 
 [![](https://api.travis-ci.org/danharper/LaravelJSONx.svg)](https://travis-ci.org/danharper/LaravelJSONx) [![Latest Stable Version](https://poser.pugx.org/danharper/laravel-jsonx/v/stable)](https://packagist.org/packages/danharper/laravel-jsonx) [![License](https://poser.pugx.org/danharper/laravel-jsonx/license)](https://packagist.org/packages/danharper/laravel-jsonx)
 
