@@ -106,3 +106,4 @@ When the response is asked for as JSON (default) as `Accept: application/json` o
 	<json:string name="hello">Portsmouth</json:string>
 </json:object>
 ```
+
