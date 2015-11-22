@@ -67,7 +67,7 @@ So for example, these two are equivalent (assuming they're sent with `Content-Ty
 {
   "address": {
     "line1": "9 Long Street",
-    "postcode": "Portsmouth"
+    "city": "Portsmouth"
   }
 }
 ```
