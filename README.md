@@ -8,7 +8,7 @@ Requests just need to use the `Accept: application/xml` header to receive the re
 
 It does this using IBM's standard for representing JSON as XML: [JSONx](https://tools.ietf.org/html/draft-rsalz-jsonx-00).
 
-This library is just a small wrapper around [`danharper/jsonx`](https://github.com/danharper/jsonx). If you're not using Laravel, or want something based around standard PSR-7 messages, check out [`danharper/psr7-jsonx`](https://github.com/danharper/psr7-jsonx).
+This library is just a small wrapper around [`danharper/jsonx`](https://github.com/danharper/jsonx). If you're not using Laravel, or want something based around standard PSR-7 messages, check out [`danharper/psr7-jsonx`](https://github.com/danharper/Psr7JSONx).
 
 ## Installation
 
