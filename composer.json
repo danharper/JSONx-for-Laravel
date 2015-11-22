@@ -9,7 +9,7 @@
   ],
   "minimum-stability": "stable",
   "require": {
-    "danharper/jsonx": "dev-master",
+    "danharper/jsonx": "^0.1.0",
     "illuminate/http": ">=5.0.0"
   },
   "require-dev": {
