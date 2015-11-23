@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5a9a707241d7fb9ae539e82e41250735",
-    "content-hash": "5a182a9c8557e724c954ded78267e332",
+    "hash": "2d29bf3e59201de2f7e5cba6f3025bc8",
+    "content-hash": "a1bed6a7b31f47cd1bd69122ff70689b",
     "packages": [
         {
             "name": "danharper/jsonx",
-            "version": "dev-master",
+            "version": "v0.1.0",
             "source": {
                 "type": "git",
-                "url": "git@github.com:danharper/JSONx.git",
-                "reference": "7464935dcc90e817b2a05e22c0171bfd0bd2a0a2"
+                "url": "https://github.com/danharper/JSONx.git",
+                "reference": "551ab64f6f4a9d19c516cc7c62ac449190c5a0e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/danharper/JSONx/zipball/7464935dcc90e817b2a05e22c0171bfd0bd2a0a2",
-                "reference": "7464935dcc90e817b2a05e22c0171bfd0bd2a0a2",
+                "url": "https://api.github.com/repos/danharper/JSONx/zipball/551ab64f6f4a9d19c516cc7c62ac449190c5a0e3",
+                "reference": "551ab64f6f4a9d19c516cc7c62ac449190c5a0e3",
                 "shasum": ""
             },
             "require-dev": {
@@ -31,11 +31,7 @@
                     "danharper\\JSONx\\": "src"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "danharper\\JSONx\\Tests\\": "tests"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -46,11 +42,7 @@
                 }
             ],
             "description": "JSONx is an IBM standard format to represent JSON as XML https://twitter.com/danharper7/status/514822464673951744",
-            "support": {
-                "source": "https://github.com/danharper/JSONx/tree/master",
-                "issues": "https://github.com/danharper/JSONx/issues"
-            },
-            "time": "2015-11-22 11:56:06"
+            "time": "2015-11-22 16:07:46"
         },
         {
             "name": "danielstjules/stringy",
@@ -1949,9 +1941,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "danharper/jsonx": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
