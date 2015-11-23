@@ -1,6 +1,6 @@
 # JSONx for Laravel
 
-[![](https://api.travis-ci.org/danharper/LaravelJSONx.svg)](https://travis-ci.org/danharper/LaravelJSONx) [![Latest Stable Version](https://poser.pugx.org/danharper/laravel-jsonx/v/stable)](https://packagist.org/packages/danharper/laravel-jsonx) [![License](https://poser.pugx.org/danharper/laravel-jsonx/license)](https://packagist.org/packages/danharper/laravel-jsonx)
+[![](https://api.travis-ci.org/danharper/JSONx-for-Laravel.svg)](https://travis-ci.org/danharper/JSONx-for-Laravel) [![Latest Stable Version](https://poser.pugx.org/danharper/laravel-jsonx/v/stable)](https://packagist.org/packages/danharper/laravel-jsonx) [![License](https://poser.pugx.org/danharper/laravel-jsonx/license)](https://packagist.org/packages/danharper/laravel-jsonx)
 
 Add XML support to your JSON API just by adding this one middleware. All incoming XML requests are converted to JSON. All outgoing JSON responses are converted to XML.
 
