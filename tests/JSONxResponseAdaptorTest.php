@@ -75,6 +75,22 @@ class JSONxResponseAdaptorTest extends TestCase {
 		$this->assertEquals($response, $out);
 	}
 
+	public function testItConvertsResponsesWithContentTypeAndCharset()
+	{
+		$request = $this->makeRequest();
+		$request->headers->set('Accept', 'application/xml');
+
+		$response = new Response(['city' => 'Portsmouth'], 200);
+		$response->headers->set('Content-Type', 'application/json; charset=UTF-8');
+
+		$out = $this->go($request, clone $response);
+
+		$this->assertInstanceOf(Response::class, $out);
+		$this->assertEquals(200, $out->getStatusCode());
+		$this->assertEquals('application/xml; charset=UTF-8', $out->headers->get('Content-Type'));
+		$this->assertXmlStringEqualsXmlString($this->toJSONx(['city' => 'Portsmouth']), $out->getContent());
+	}
+
 	private function go(Request $request, $response)
 	{
 		return (new JSONxResponseAdaptor(new JSONx))->handle($request, $response);
