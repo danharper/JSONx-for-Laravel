@@ -21,7 +21,9 @@ class JSONxRequestAdaptor {
 	{
 		if ($this->givingXml($request))
 		{
-			$request->headers->set('Content-Type', 'application/json');
+			$charset = $this->getCharset($request);
+
+			$request->headers->set('Content-Type', 'application/json' . ($charset ? '; ' . $charset : ''));
 			$request->replace($this->fromJSONx($request));
 		}
 
@@ -30,7 +32,17 @@ class JSONxRequestAdaptor {
 
 	private function givingXml(Request $request)
 	{
-		return $request->header('Content-Type') === 'application/xml';
+		return substr($request->headers->get('Content-Type'), 0, 15) === 'application/xml';
+	}
+
+	private function getCharset(Request $request)
+	{
+		$pos = strpos($request->headers->get('Content-Type'), 'charset');
+
+		if ($pos !== false)
+		{
+			return substr($request->headers->get('Content-Type'), $pos);
+		}
 	}
 
 	/**

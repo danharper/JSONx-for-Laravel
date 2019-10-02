@@ -50,6 +50,16 @@ class JSONxRequestAdaptorTest extends TestCase {
 		$this->assertEquals('!!!', $out->input('hello.world'));
 	}
 
+	public function testItConvertsRequestsWithXmlAndCharset()
+	{
+		$request = $this->makeRequest($this->toJSONx(['city' => 'Portsmouth']));
+		$request->headers->set('Content-Type', 'application/xml; charset=UTF-8');
+
+		$out = $this->go(clone $request);
+
+		$this->assertEquals('application/json; charset=UTF-8', $out->header('Content-Type'));
+	}
+
 	private function go(Request $request)
 	{
 		return (new JSONxRequestAdaptor(new JSONx))->handle($request);

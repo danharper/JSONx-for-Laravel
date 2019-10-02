@@ -30,7 +30,7 @@ class JSONxResponseAdaptor {
 				return new Response(
 					$this->converter->toJSONx($response->getOriginalContent()),
 					$response->getStatusCode(),
-					array_merge($response->headers->all(), ['Content-Type' => 'application/xml'])
+					array_merge($response->headers->all(), ['Content-Type' => $this->appendCharset($response, 'application/xml')])
 				);
 			}
 			else if ($response instanceof JsonResponse)
@@ -38,7 +38,7 @@ class JSONxResponseAdaptor {
 				return new Response(
 					$this->converter->toJSONx(json_decode($response->getContent())),
 					$response->getStatusCode(),
-					array_merge($response->headers->all(), ['Content-Type' => 'application/xml'])
+					array_merge($response->headers->all(), ['Content-Type' => $this->appendCharset($response, 'application/xml')])
 				);
 			}
 			else
@@ -61,7 +61,18 @@ class JSONxResponseAdaptor {
 
 	private function providingJson(Response $response)
 	{
-		return $response->headers->get('Content-Type') === 'application/json';
+		return substr($response->headers->get('Content-Type'), 0, 16) === 'application/json';
 	}
 
+	private function appendCharset($response, $contentType)
+	{
+		$pos = strpos($response->headers->get('Content-Type'), 'charset');
+
+		if ($pos !== false)
+		{
+			return $contentType . '; ' . substr($response->headers->get('Content-Type'), $pos);
+		}
+
+		return $contentType;
+	}
 }
